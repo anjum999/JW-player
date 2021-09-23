@@ -1,0 +1,111 @@
+.App {
+  text-align:center;
+  background-color:rgba(198, 198, 202, 0.5);
+}
+/*
+*/
+.glow-on-hover {
+  font-family: 'Times New Roman', Times, serif;
+  font-size:18px;
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg,  #ff7300, #fffb00,  #00ffd5,  #7a00ff,  #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: rgb(143, 137, 137)
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(139, 131, 131);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+/*
+*/
+.modalcss{          
+          border-radius: 10px;
+          margin: 140px 470px ;
+          width: 25%;
+          height: 25%;
+          border: 2px solid rgba(36, 30, 30, 0.322);
+          padding: 50px;
+          text-align: center;
+          background-color:rgb(250, 250, 209);
+          padding-top: 50px;
+          padding-bottom: 30px;
+}
+
+.lblfrm{
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: bold;
+}
+.lblfrmv{
+  padding-left: 37px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: bold;
+}
+.date{
+  padding-left: 27px;
+  padding-right: 5px;
+}
+.tblfrm {
+  border-collapse: collapse;
+  font-size: 18px;
+  padding-left: 10px;
+  padding-bottom: 35%;
+  font-family: 'Times New Roman', Times, serif; 
+}
+th,td{
+  padding: 15px 30px;
+  text-align: center;
+  color:rgb(155, 146, 146);
+}
+tr,td{ 
+   background-color:lightgoldenrodyellow;
+}
